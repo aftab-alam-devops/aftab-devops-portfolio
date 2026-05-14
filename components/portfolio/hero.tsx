@@ -93,7 +93,7 @@ export function Hero() {
       <GridBackground />
 
       {/* Background photo on the right side */}
-      <div className="absolute top-0 right-0 w-full h-full z-0 pointer-events-none opacity-75 lg:opacity-100">
+      <div className="absolute top-0 right-0 w-full h-full z-0 pointer-events-none opacity-90 lg:opacity-100">
         <Image
           src="/aftab-portrait-new.png"
           alt="Aftab Background"
@@ -126,7 +126,7 @@ export function Hero() {
                     alt="Aftab Alam"
                     width={96}
                     height={96}
-                    className="w-full h-full object-cover brightness-[0.70]"
+                    className="w-full h-full object-cover brightness-100"
                     priority
                   />
                 </div>
@@ -203,7 +203,9 @@ export function Hero() {
                 Contact Me
               </a>
               <a
-                href="/resume.pdf"
+                href="https://drive.google.com/file/d/1HeFpZEVFGp4vhTo5Du4YUzTL_fmdo0Tz/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg border border-border px-5 py-2.5 text-sm font-semibold text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all"
               >
                 <Download className="size-4" />
