@@ -12,7 +12,6 @@ export function Footer() {
             <Logo size={40} />
             <div className="font-mono text-sm">
               <p className="text-foreground">aftab@devops</p>
-              <p className="text-[11px] text-muted-foreground">~/portfolio — built with care</p>
             </div>
           </div>
 

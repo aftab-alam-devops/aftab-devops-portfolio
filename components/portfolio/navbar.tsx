@@ -63,7 +63,6 @@ export function Navbar() {
             <Logo size={36} />
             <div className="flex flex-col leading-none">
               <span className="font-mono text-sm text-primary">aftab@devops</span>
-              <span className="font-mono text-[10px] text-muted-foreground">~/portfolio</span>
             </div>
           </a>
 
