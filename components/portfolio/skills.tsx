@@ -75,14 +75,14 @@ export function Skills() {
           transition={{ duration: 0.6 }}
           className="max-w-2xl"
         >
-          <span className="inline-flex items-center gap-2 font-mono text-xs text-primary mb-3">
-            <span className="size-1.5 rounded-full bg-primary" />
-            02 // toolbox
+          <span className="inline-flex items-center gap-3 font-mono text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-3">
+            <span className="size-3 rounded-full bg-primary animate-pulse" />
+            02 toolbox
           </span>
-          <h2 className="text-balance text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
-            The <span className="text-primary">stack</span> I ship with.
+          <h2 className="text-balance text-xl sm:text-2xl lg:text-3xl font-semibold text-primary tracking-tight mt-2">
+            The <span className="text-accent">stack</span> I ship with.
           </h2>
-          <p className="mt-3 text-muted-foreground leading-relaxed">
+          <p className="mt-3 text-base sm:text-lg text-muted-foreground leading-relaxed">
             A growing toolbox of cloud-native technologies — sharpened through real-world projects,
             broken clusters, and a healthy obsession with terminal output.
           </p>
@@ -129,24 +129,12 @@ export function Skills() {
                         <Icon className="size-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-semibold">{skill.name}</h3>
-                        <p className="text-[11px] font-mono text-muted-foreground">
+                        <h3 className="font-semibold text-base sm:text-lg">{skill.name}</h3>
+                        <p className="text-xs font-mono text-muted-foreground">
                           {skill.category}
                         </p>
                       </div>
                     </div>
-                    <span className="font-mono text-xs text-accent">{skill.level}%</span>
-                  </div>
-
-                  <div className="relative mt-4 h-1.5 rounded-full bg-secondary overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.level}%` }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1.2, delay: 0.1, ease: "easeOut" }}
-                      className="absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-primary to-accent"
-                    />
-                    <div className="absolute inset-0 animate-shimmer opacity-50" />
                   </div>
                 </motion.div>
               )

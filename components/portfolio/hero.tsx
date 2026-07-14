@@ -136,15 +136,20 @@ export function Hero() {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="inline-flex w-fit items-center gap-2 rounded-full glass px-3 py-1.5 text-xs font-medium"
+                className="flex flex-col gap-1.5"
               >
-                <span className="relative flex size-2">
-                  <span className="absolute inline-flex h-full w-full rounded-full bg-accent opacity-75 animate-ping" />
-                  <span className="relative inline-flex size-2 rounded-full bg-accent" />
-                </span>
-                <span className="text-muted-foreground">
-                  Available for <span className="text-foreground">DevOps roles</span>
-                </span>
+                <div className="inline-flex w-fit items-center gap-2 rounded-full glass px-3 py-1.5 text-xs font-medium">
+                  <span className="relative flex size-2">
+                    <span className="absolute inline-flex h-full w-full rounded-full bg-accent opacity-75 animate-ping" />
+                    <span className="relative inline-flex size-2 rounded-full bg-accent" />
+                  </span>
+                  <span className="text-muted-foreground">
+                    Available for <span className="text-foreground">Devops and Cloud</span>
+                  </span>
+                </div>
+                <div className="text-xs font-mono text-muted-foreground/80 pl-2">
+                  full time , freelancer
+                </div>
               </motion.div>
             </div>
 
@@ -175,11 +180,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-pretty text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed"
             >
-              DevOps &amp; Cloud Engineer focused on{" "}
-              <span className="text-foreground">automation</span>,{" "}
-              <span className="text-foreground">CI/CD pipelines</span>, and{" "}
-              <span className="text-foreground">Kubernetes-native</span> deployments on AWS.
-              Passionate about transforming complex challenges into resilient, highly available systems.
+              DevOps &amp; Cloud Engineer offering **worldwide freelance support**, **hourly consulting**, and **permanent full-time integration**. Specializing in automated AWS architectures, secure CI/CD pipelines, and scalable Kubernetes operations.
             </motion.p>
 
             <motion.div
@@ -203,7 +204,7 @@ export function Hero() {
                 Contact Me
               </a>
               <a
-                href="https://drive.google.com/file/d/1HeFpZEVFGp4vhTo5Du4YUzTL_fmdo0Tz/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1VDXxo_X0KqZtcxJ4lcPs81D3Ym-KiYux/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg border border-border px-5 py-2.5 text-sm font-semibold text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all"
@@ -223,9 +224,9 @@ export function Hero() {
                 <MapPin className="size-3.5 text-primary" /> Delhi, India
               </span>
               <span className="flex items-center gap-1.5">
-                <span className="size-1.5 rounded-full bg-accent" /> Open to remote
+                <span className="size-1.5 rounded-full bg-accent" /> Open to Remote / Worldwide Freelancer
               </span>
-              <span>BCA Graduate</span>
+              <span>BCA Graduate · MCA In Progress</span>
             </motion.div>
           </div>
 

@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Workflow, PackageOpen, CloudUpload, ServerCog, Globe, Activity } from "lucide-react"
+import { Workflow, PackageOpen, CloudUpload, ServerCog, Globe, Activity, Settings, Layers } from "lucide-react"
 
 const services = [
   {
@@ -34,6 +34,16 @@ const services = [
     title: "Monitoring & Alerting",
     desc: "Prometheus + Grafana stacks with dashboards, alerting rules, and uptime SLOs you can trust.",
   },
+  {
+    Icon: Layers,
+    title: "Infrastructure as Code (IaC)",
+    desc: "Declarative cloud provisioning using Terraform and Helm. Prevent drift, manage state, and maintain reproducible stacks.",
+  },
+  {
+    Icon: Settings,
+    title: "Configuration Automation",
+    desc: "Write Ansible playbooks to provision, patch, and configure fleets of servers with consistent, auditable configurations.",
+  },
 ]
 
 export function Services() {
@@ -47,16 +57,15 @@ export function Services() {
           transition={{ duration: 0.6 }}
           className="max-w-2xl"
         >
-          <span className="inline-flex items-center gap-2 font-mono text-xs text-primary mb-3">
-            <span className="size-1.5 rounded-full bg-primary" />
-            05 // services
+          <span className="inline-flex items-center gap-3 font-mono text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-3">
+            <span className="size-3 rounded-full bg-primary animate-pulse" />
+            06 services
           </span>
-          <h2 className="text-balance text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
-            What I can <span className="text-primary">build for you</span>.
+          <h2 className="text-balance text-xl sm:text-2xl lg:text-3xl font-semibold text-primary tracking-tight mt-2">
+            What I can <span className="text-accent">build for you</span>.
           </h2>
-          <p className="mt-3 text-muted-foreground leading-relaxed">
-            Available for freelance contracts, internships, and full-time DevOps roles. Let&apos;s
-            ship something solid.
+          <p className="mt-3 text-base sm:text-lg text-muted-foreground leading-relaxed">
+            Offering professional freelance consulting, hourly troubleshoot contracts, and permanent full-time DevOps engineering globally.
           </p>
         </motion.div>
 
@@ -77,11 +86,11 @@ export function Services() {
                 <Icon className="size-5 text-primary" />
               </div>
               <h3 className="mt-5 font-semibold">{title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{desc}</p>
+              <p className="mt-2 text-base text-muted-foreground leading-relaxed">{desc}</p>
 
-              <div className="mt-4 flex items-center gap-1.5 text-[11px] font-mono text-accent">
+              <div className="mt-4 flex items-center gap-1.5 text-xs font-mono text-accent">
                 <span className="size-1.5 rounded-full bg-accent animate-pulse" />
-                accepting projects
+                available: full time, hourly & contract
               </div>
             </motion.div>
           ))}

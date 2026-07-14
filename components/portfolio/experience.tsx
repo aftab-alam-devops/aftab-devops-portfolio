@@ -25,12 +25,12 @@ const experiences: Exp[] = [
     badge: "Current",
     description: "Architecting and managing cloud infrastructure while building fully automated end-to-end CI/CD pipelines.",
     highlights: [
-      "Designed and maintained CI/CD pipelines using Jenkins and GitHub Actions, reducing deployment time by ~40%.",
-      "Provisioned AWS infrastructure (EC2, S3, IAM, VPCs) ensuring high availability and cost optimization.",
-      "Containerized microservices using Docker and orchestrated deployments on Kubernetes (K8s).",
-      "Implemented Infrastructure as Code (IaC) using Terraform for repeatable deployments.",
-      "Monitored system health with AWS CloudWatch and Grafana.",
-      "Authored Bash and shell scripts to automate routine operational tasks."
+      "Built CI/CD pipelines with Jenkins and GitHub Actions, reducing deployment time by 40% and eliminating all manual deployment steps.",
+      "Provisioned AWS infrastructure (EC2, S3, IAM, VPC, Security Groups) for reliable, cost-efficient production environments.",
+      "Containerized microservices with Docker and managed Kubernetes clusters for consistent, scalable deployments.",
+      "Used Terraform to automate cloud provisioning, making infrastructure fully version-controlled and repeatable.",
+      "Set up CloudWatch and Grafana monitoring dashboards for proactive issue detection and faster incident response.",
+      "Wrote Bash scripts to automate routine tasks, saving team time and reducing human error in daily operations."
     ],
     stack: ["AWS", "Jenkins", "Docker", "Kubernetes", "Terraform", "Grafana", "Bash"],
   }
@@ -47,17 +47,18 @@ export function Experience() {
   return (
     <section id="experience" className="relative py-24">
       <div className="mx-auto max-w-6xl px-4">
-        <div className="flex flex-col items-center gap-3 text-center mb-14">
-          <span className="font-mono text-xs text-primary tracking-widest">
-            // EXPERIENCE
+        <div className="max-w-2xl mb-14 flex flex-col gap-3">
+          <span className="inline-flex items-center gap-3 font-mono text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+            <span className="size-3 rounded-full bg-primary animate-pulse" />
+            03 experience
           </span>
-          <h2 className="text-balance text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
+          <h2 className="text-balance text-xl sm:text-2xl lg:text-3xl font-semibold text-primary tracking-tight mt-2">
             Where I&apos;ve been{" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="text-accent">
               building
             </span>
           </h2>
-          <p className="max-w-2xl text-pretty text-muted-foreground">
+          <p className="text-pretty text-base sm:text-lg text-muted-foreground leading-relaxed">
             A mix of freelance work, open-source labs, and self-driven training — every line
             shipped to a real server, not just a sandbox.
           </p>
@@ -90,7 +91,7 @@ export function Experience() {
                   {/* Main column */}
                   <div className="flex flex-col gap-3 min-w-0">
                     <div className="flex flex-wrap items-center gap-2">
-                      <h3 className="text-lg sm:text-xl font-semibold leading-tight">
+                      <h3 className="text-xl sm:text-2xl font-semibold leading-tight">
                         {exp.role}
                       </h3>
                       <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider text-accent ring-1 ring-accent/30">
@@ -99,13 +100,13 @@ export function Experience() {
                       </span>
                     </div>
 
-                    <p className="font-mono text-xs text-muted-foreground">
+                    <p className="font-mono text-sm text-muted-foreground">
                       <span className="text-primary">{exp.org}</span>
                       <span className="mx-2 text-border">·</span>
                       <span>{exp.location}</span>
                     </p>
 
-                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed text-pretty">
+                    <p className="text-base sm:text-lg text-muted-foreground leading-relaxed text-pretty">
                       {exp.description}
                     </p>
 
@@ -113,9 +114,9 @@ export function Experience() {
                       {exp.highlights.map((h) => (
                         <li
                           key={h}
-                          className="flex items-start gap-2.5 text-sm text-foreground/90"
+                          className="flex items-start gap-2.5 text-base text-foreground/90"
                         >
-                          <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-primary" />
+                          <CheckCircle2 className="mt-1 size-4 shrink-0 text-primary" />
                           <span className="leading-relaxed">{h}</span>
                         </li>
                       ))}
@@ -125,7 +126,7 @@ export function Experience() {
                       {exp.stack.map((s) => (
                         <span
                           key={s}
-                          className="rounded-md bg-secondary/60 px-2 py-1 text-[11px] font-mono text-muted-foreground ring-1 ring-border"
+                          className="rounded-md bg-secondary/60 px-2 py-1 text-xs font-mono text-muted-foreground ring-1 ring-border"
                         >
                           {s}
                         </span>
@@ -135,7 +136,7 @@ export function Experience() {
 
                   {/* Period column */}
                   <div className="md:text-right">
-                    <span className="inline-block font-mono text-xs text-primary bg-primary/5 px-3 py-1.5 rounded-md ring-1 ring-primary/20">
+                    <span className="inline-block font-mono text-sm text-primary bg-primary/5 px-3 py-1.5 rounded-md ring-1 ring-primary/20">
                       {exp.period}
                     </span>
                   </div>

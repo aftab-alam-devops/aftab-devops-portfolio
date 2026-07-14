@@ -5,35 +5,35 @@ import { GraduationCap, GitBranch, Container, Cloud, Boxes, Rocket } from "lucid
 
 const items = [
   {
-    year: "Aug 2022 — Jun 2025",
-    title: "Bachelor of Computer Applications (BCA)",
-    desc: "Graduated from Galgotias University, Greater Noida, India with a CGPA of 8.21/10. Built strong foundations in software engineering and cloud infrastructure.",
+    year: "Jul 2026 — Jun 2028",
+    title: "Master of Computer Applications (MCA)",
+    desc: "Amity University, Noida. Advanced studies in computer networks, enterprise architectures, and systems engineering (In Progress).",
     Icon: GraduationCap,
+    current: true,
   },
   {
-    year: "Aug 2017 — Jun 2019",
-    title: "Intermediate (10+2)",
-    desc: "S.H.N.Y. Intermediate College, Deoria, India.",
+    year: "Aug 2022 — Jun 2025",
+    title: "Bachelor of Computer Applications (BCA)",
+    desc: "Galgotias University, Greater Noida. Graduated with a CGPA of 8.21/10, focusing on software development and cloud technologies.",
     Icon: GraduationCap,
   },
   {
     year: "Certified",
-    title: "AWS Cloud Training",
-    desc: "Completed comprehensive AWS cloud training on Udemy.",
+    title: "AWS Cloud & Networking",
+    desc: "Comprehensive AWS Cloud Training (Udemy) and Computer Networking specialization (Google / Coursera).",
     Icon: Cloud,
   },
   {
     year: "Certified",
-    title: "AI & Generative AI",
-    desc: "Earned Artificial Intelligence Fundamentals from IBM and Generative AI from UpGrad.",
+    title: "DevOps & AI on AWS",
+    desc: "Completed professional cloud certifications in DevOps methodologies and AI on AWS via Coursera.",
     Icon: Rocket,
   },
   {
     year: "Certified",
-    title: "Google UX Design",
-    desc: "Google UX Design Professional Certificate via Coursera.",
-    Icon: GitBranch,
-    current: true,
+    title: "Generative AI & AI Fundamentals",
+    desc: "Earned AI Fundamentals and Generative AI credentials from IBM and UpGrad.",
+    Icon: Rocket,
   },
 ]
 
@@ -52,15 +52,15 @@ export function Timeline() {
           transition={{ duration: 0.6 }}
           className="max-w-2xl mb-14"
         >
-          <span className="inline-flex items-center gap-2 font-mono text-xs text-primary mb-3">
-            <span className="size-1.5 rounded-full bg-primary" />
-            04 // journey
+          <span className="inline-flex items-center gap-3 font-mono text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-3">
+            <span className="size-3 rounded-full bg-primary animate-pulse" />
+            05 journey
           </span>
-          <h2 className="text-balance text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
-            From <span className="text-primary">student</span> to{" "}
+          <h2 className="text-balance text-xl sm:text-2xl lg:text-3xl font-semibold text-primary tracking-tight mt-2">
+            From <span className="text-accent">student</span> to{" "}
             <span className="text-accent">shipping engineer</span>.
           </h2>
-          <p className="mt-3 text-muted-foreground leading-relaxed">
+          <p className="mt-3 text-base sm:text-lg text-muted-foreground leading-relaxed">
             A learning journey driven by curiosity, late-night clusters, and the satisfaction of a
             green pipeline.
           </p>
@@ -108,7 +108,7 @@ export function Timeline() {
                     }`}
                   >
                     <div className="gradient-border p-5 inline-block text-left">
-                      <span className="inline-block rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-mono text-primary ring-1 ring-primary/30 mb-2">
+                      <span className="inline-block rounded-full bg-primary/10 px-2 py-0.5 text-xs font-mono text-primary ring-1 ring-primary/30 mb-2">
                         {item.year}
                       </span>
                       <h3 className="font-semibold text-lg">
@@ -120,7 +120,7 @@ export function Timeline() {
                           </span>
                         )}
                       </h3>
-                      <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
+                      <p className="mt-1 text-base text-muted-foreground leading-relaxed">
                         {item.desc}
                       </p>
                     </div>

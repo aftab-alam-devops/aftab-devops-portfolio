@@ -44,13 +44,13 @@ export function About() {
           transition={{ duration: 0.6 }}
           className="max-w-2xl"
         >
-          <span className="inline-flex items-center gap-2 font-mono text-xs text-primary mb-3">
-            <span className="size-1.5 rounded-full bg-primary" />
-            01 // about
+          <span className="inline-flex items-center gap-3 font-mono text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-3">
+            <span className="size-3 rounded-full bg-primary animate-pulse" />
+            01 about
           </span>
-          <h2 className="text-balance text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
+          <h2 className="text-balance text-xl sm:text-2xl lg:text-3xl font-semibold text-primary tracking-tight mt-2">
             Engineering reliable systems with{" "}
-            <span className="text-primary">automation at the core.</span>
+            <span className="text-accent">automation at the core.</span>
           </h2>
         </motion.div>
 
@@ -60,7 +60,7 @@ export function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-3 space-y-5 text-pretty text-base leading-relaxed text-muted-foreground"
+            className="lg:col-span-3 space-y-5 text-pretty text-lg leading-relaxed text-muted-foreground"
           >
             <p>
               I&apos;m <span className="text-foreground font-medium">Aftab Alam</span>, a DevOps &amp; Cloud Engineer with hands-on experience building scalable, high-availability systems aligned with modern agile practices.
@@ -78,8 +78,8 @@ export function About() {
                   key={s.label}
                   className="rounded-xl glass p-4 text-center hover:border-primary/40 transition-colors"
                 >
-                  <div className="text-2xl font-bold text-primary">{s.value}</div>
-                  <div className="text-[11px] font-mono text-muted-foreground mt-1">{s.label}</div>
+                  <div className="text-3xl font-bold text-primary">{s.value}</div>
+                  <div className="text-xs font-mono text-muted-foreground mt-1">{s.label}</div>
                 </div>
               ))}
             </div>
@@ -105,8 +105,8 @@ export function About() {
                 <div className="flex size-10 items-center justify-center rounded-lg bg-primary/10 ring-1 ring-primary/30 group-hover:bg-primary/20 transition-colors">
                   <Icon className="size-5 text-primary" />
                 </div>
-                <h3 className="mt-4 font-semibold">{title}</h3>
-                <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{desc}</p>
+                <h3 className="mt-4 text-base sm:text-lg font-semibold">{title}</h3>
+                <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{desc}</p>
               </motion.div>
             ))}
           </motion.div>

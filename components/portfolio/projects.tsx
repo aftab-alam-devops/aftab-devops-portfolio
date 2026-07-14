@@ -93,31 +93,19 @@ function K8sMonitoringPreview() {
   )
 }
 
-function K8sArchPreview() {
+function SeoAnalyzerPreview() {
   return (
-    <div className="relative h-full w-full p-4 flex flex-col gap-2">
-      <div className="flex items-center justify-between text-[10px] font-mono text-muted-foreground">
-        <span>cluster / production</span>
-        <span className="text-accent">3 nodes</span>
+    <div className="relative h-full w-full p-4 flex flex-col gap-2 font-mono text-[10px] text-muted-foreground">
+      <div className="flex items-center justify-between">
+        <span>seo-analyzer.py</span>
+        <span className="text-accent">● completed</span>
       </div>
-      <div className="flex-1 grid grid-cols-3 gap-2">
-        {[1, 2, 3].map((n) => (
-          <div key={n} className="rounded-md bg-card/80 border border-border p-2 flex flex-col gap-1">
-            <div className="text-[9px] font-mono text-muted-foreground">node-{n}</div>
-            {[1, 2, 3].map((p) => (
-              <div
-                key={p}
-                className="rounded bg-primary/15 border border-primary/30 px-1.5 py-0.5 text-[9px] font-mono text-primary flex items-center gap-1"
-              >
-                <span className="size-1 rounded-full bg-accent animate-pulse" />
-                pod-{n}-{p}
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
-      <div className="rounded-md bg-card/80 border border-border p-2 font-mono text-[10px] text-muted-foreground">
-        <span className="text-accent">$</span> kubectl scale --replicas=9 deploy/api
+      <div className="rounded-md bg-card/80 border border-border p-3 space-y-1 flex-1 overflow-hidden">
+        <p className="text-primary">$ python analyzer.py --url client.com</p>
+        <p className="text-foreground">[1/4] Scraping headers & meta tags...</p>
+        <p className="text-foreground">[2/4] Testing page load speed: 1.2s ✓</p>
+        <p className="text-foreground">[3/4] Keyword density check: "devops" (3.2%)</p>
+        <p className="text-accent">✓ SEO Report generated: seo_report.pdf</p>
       </div>
     </div>
   )
@@ -157,10 +145,10 @@ function ScriptsPreview() {
 const projects = [
   {
     id: "movies-app",
-    title: "Containerized Movie Streaming Application",
+    title: "Movie Streaming App on AWS EKS",
     summary:
-      "Provisioned and managed a secure Kubernetes cluster on AWS EKS, orchestrating Docker containers with Helm charts for high availability.",
-    tech: ["Docker", "Kubernetes", "AWS", "Linux"] as const,
+      "Provisioned EKS cluster with IAM roles and VPC networking; deployed app via Helm charts with rollback support. Configured Kubernetes Ingress and AWS ELB for load balancing and high availability across multiple pods.",
+    tech: ["Docker", "Kubernetes", "AWS", "Helm"] as const,
     Preview: K8sMonitoringPreview,
     accent: "primary" as const,
     featured: true,
@@ -168,25 +156,25 @@ const projects = [
   },
   {
     id: "mern-deploy",
-    title: "MERN E-Commerce Store Deployment",
+    title: "MERN E-Commerce CI/CD Deployment",
     summary:
-      "Built an automated CI/CD pipeline with Jenkins and GitHub to continuously deliver a Dockerized web application to AWS EC2.",
-    tech: ["Jenkins", "Docker", "AWS", "GitHub", "Linux"] as const,
+      "Automated full pipeline with Jenkins and GitHub Webhooks — every commit triggers build, test, and deploy automatically. Dockerized the MERN app and deployed on AWS EC2; wrote shell scripts for server setup and deployment validation.",
+    tech: ["Jenkins", "Docker", "AWS", "GitHub"] as const,
     Preview: PipelinePreview,
     accent: "accent" as const,
     featured: true,
     links: { live: "https://github.com/aftab-alam-devops/MERN-E-Commerce-Store-Deployment.git", code: "https://github.com/aftab-alam-devops/MERN-E-Commerce-Store-Deployment.git" },
   },
   {
-    id: "bank-system",
-    title: "Bank Management System",
+    id: "seo-analyzer",
+    title: "SEO Page Analyzer",
     summary:
-      "Developed a scalable Java-based banking application deployed on AWS EC2, featuring secure transaction processing and a normalized MySQL database.",
-    tech: ["AWS"] as const,
-    Preview: K8sArchPreview,
+      "Audits web pages for meta tags, keyword density, heading structure, and page speed; auto-generates actionable SEO reports.",
+    tech: ["Python", "Web Scraping", "BeautifulSoup", "Requests"] as const,
+    Preview: SeoAnalyzerPreview,
     accent: "primary" as const,
     featured: false,
-    links: { live: "https://github.com/aftab-alam-devops/Bank-Management-System.git", code: "https://github.com/aftab-alam-devops/Bank-Management-System.git" },
+    links: { live: "https://github.com/aftab-alam-devops/seo-page-analyzer.git", code: "https://github.com/aftab-alam-devops/seo-page-analyzer.git" },
   },
 ]
 
@@ -232,7 +220,7 @@ function ProjectCard({
           <h3 className="text-lg font-bold tracking-tight group-hover:text-primary transition-colors">
             {project.title}
           </h3>
-          <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{project.summary}</p>
+          <p className="mt-2 text-base text-muted-foreground leading-relaxed">{project.summary}</p>
         </div>
 
         <div className="flex flex-wrap gap-1.5">
@@ -241,7 +229,7 @@ function ProjectCard({
             return (
               <span
                 key={t}
-                className="inline-flex items-center gap-1.5 rounded-md bg-secondary/60 px-2 py-1 text-[11px] font-mono text-muted-foreground ring-1 ring-border"
+                className="inline-flex items-center gap-1.5 rounded-md bg-secondary/60 px-2 py-1 text-xs font-mono text-muted-foreground ring-1 ring-border"
               >
                 <Icon className="size-3 text-primary" />
                 {t}
@@ -284,14 +272,14 @@ export function Projects() {
           className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12"
         >
           <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-2 font-mono text-xs text-primary mb-3">
-              <span className="size-1.5 rounded-full bg-primary" />
-              03 // production work
+            <span className="inline-flex items-center gap-3 font-mono text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-3">
+              <span className="size-3 rounded-full bg-primary animate-pulse" />
+              04 production work
             </span>
-            <h2 className="text-balance text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
-              Projects that <span className="text-primary">ship</span>.
+            <h2 className="text-balance text-xl sm:text-2xl lg:text-3xl font-semibold text-primary tracking-tight mt-2">
+              Projects that <span className="text-accent">ship</span>.
             </h2>
-            <p className="mt-3 text-muted-foreground leading-relaxed">
+            <p className="mt-3 text-base sm:text-lg text-muted-foreground leading-relaxed">
               Real deployments — not tutorials. Each project solves an operational problem with
               automation, observability, and infrastructure-as-code.
             </p>

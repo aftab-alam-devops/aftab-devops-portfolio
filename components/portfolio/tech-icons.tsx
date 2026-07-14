@@ -214,6 +214,9 @@ export const techIconMap = {
   "Android Studio": MobileIcon,
   Figma: DesignIcon,
   "Adobe XD": DesignIcon,
+  "Web Scraping": CodeIcon,
+  "BeautifulSoup": CodeIcon,
+  "Requests": WebhooksIcon,
 } as const
 
 export type TechName = keyof typeof techIconMap

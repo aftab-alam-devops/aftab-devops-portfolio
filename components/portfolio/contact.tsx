@@ -50,17 +50,15 @@ export function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-2xl mx-auto"
         >
-          <span className="inline-flex items-center gap-2 font-mono text-xs text-primary mb-3">
-            <span className="size-1.5 rounded-full bg-primary" />
-            06 // contact
+          <span className="inline-flex items-center gap-3 font-mono text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-3">
+            <span className="size-3 rounded-full bg-primary animate-pulse" />
+            07 contact
           </span>
-          <h2 className="text-balance text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
-            Let&apos;s build the{" "}
-            <span className="text-primary">next deploy</span> together.
+          <h2 className="text-balance text-xl sm:text-2xl lg:text-3xl font-semibold text-primary tracking-tight mt-2">
+            Let&apos;s build the <span className="text-accent">next deploy</span> together.
           </h2>
-          <p className="mt-3 text-muted-foreground leading-relaxed">
-            Open to DevOps Engineer roles, Cloud Engineer positions, remote internships, and
-            freelance work. I respond within 24 hours.
+          <p className="mt-3 text-base sm:text-lg text-muted-foreground leading-relaxed">
+            Hire me for **permanent DevOps roles**, **freelance contracts**, or **hourly consulting**. I respond within 24 hours.
           </p>
         </motion.div>
 
@@ -81,8 +79,8 @@ export function Contact() {
                 <Mail className="size-5 text-primary" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-[11px] font-mono text-muted-foreground">email</p>
-                <p className="font-medium truncate">uxaftab@gmail.com</p>
+                <p className="text-xs font-mono text-muted-foreground">email</p>
+                <p className="font-medium text-base sm:text-lg truncate">uxaftab@gmail.com</p>
               </div>
               <ArrowRight className="size-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all" />
             </a>
@@ -95,8 +93,8 @@ export function Contact() {
                 <Phone className="size-5 text-primary" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-[11px] font-mono text-muted-foreground">phone</p>
-                <p className="font-medium truncate">+91 7310008925</p>
+                <p className="text-xs font-mono text-muted-foreground">phone</p>
+                <p className="font-medium text-base sm:text-lg truncate">+91 7310008925</p>
               </div>
               <ArrowRight className="size-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all" />
             </a>
@@ -106,9 +104,9 @@ export function Contact() {
                 <MapPin className="size-5 text-primary" />
               </div>
               <div>
-                <p className="text-[11px] font-mono text-muted-foreground">based in</p>
-                <p className="font-medium">Delhi, India</p>
-                <p className="text-xs text-muted-foreground">UTC+5:30 · Open to remote globally</p>
+                <p className="text-xs font-mono text-muted-foreground">based in</p>
+                <p className="font-medium text-base sm:text-lg">Delhi, India</p>
+                <p className="text-sm text-muted-foreground">UTC+5:30 · Open to remote globally</p>
               </div>
             </div>
 
@@ -133,12 +131,12 @@ export function Contact() {
               </a>
             </div>
 
-            <div className="rounded-xl glass p-4 font-mono text-[11px] text-muted-foreground">
+            <div className="rounded-xl glass p-4 font-mono text-xs text-muted-foreground">
               <div className="flex items-center gap-1.5 text-accent mb-1">
                 <span className="size-1.5 rounded-full bg-accent animate-pulse" />
                 status: available
               </div>
-              <p>Currently accepting new opportunities for 2026.</p>
+              <p className="text-xs sm:text-sm">Currently accepting full-time positions and hourly contracts globally.</p>
             </div>
           </motion.div>
 
