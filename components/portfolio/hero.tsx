@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { ArrowDown, Download, Mail, MapPin, Sparkles, Cpu, Network } from "lucide-react"
+import { ArrowDown, Mail, MapPin, Sparkles, Cpu, Network } from "lucide-react"
 import { useState, useEffect } from "react"
 import { GridBackground } from "./grid-background"
 import { TerminalWindow } from "./terminal-window"
@@ -203,15 +203,7 @@ export function Hero() {
                 <Mail className="size-4" />
                 Contact Me
               </a>
-              <a
-                href="https://drive.google.com/file/d/1VDXxo_X0KqZtcxJ4lcPs81D3Ym-KiYux/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-border px-5 py-2.5 text-sm font-semibold text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all"
-              >
-                <Download className="size-4" />
-                Resume
-              </a>
+
             </motion.div>
 
             <motion.div

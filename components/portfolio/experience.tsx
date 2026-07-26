@@ -18,9 +18,9 @@ type Exp = {
 const experiences: Exp[] = [
   {
     role: "Junior DevOps & Cloud Engineer",
-    org: "UMACO",
+    org: "TechBlueLabs",
     period: "June 2025 — Present",
-    location: "Gurugram, India",
+    location: "Noida Sector 15, India",
     type: "work",
     badge: "Current",
     description: "Architecting and managing cloud infrastructure while building fully automated end-to-end CI/CD pipelines.",
