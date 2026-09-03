@@ -19,7 +19,7 @@ const experiences: Exp[] = [
   {
     role: "Junior DevOps & Cloud Engineer",
     org: "TechBlueLabs",
-    period: "June 2025 — Present",
+    period: "September 2025 — Present",
     location: "Noida Sector 15, India",
     type: "work",
     badge: "Current",
